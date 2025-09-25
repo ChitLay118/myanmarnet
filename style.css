@@ -1,0 +1,15 @@
+/* Custom styles not handled by Tailwind */
+
+body {
+    /* Sets the Inter font and a light background color */
+    font-family: 'Inter', sans-serif;
+    background-color: #f3f4f6;
+}
+
+/* Style for the fixed video player */
+.fixed-video-player {
+    /* Makes the video player sticky/fixed at the top of the viewport */
+    position: sticky;
+    top: 0;
+    z-index: 10; /* Ensures it stays above other content */
+}
