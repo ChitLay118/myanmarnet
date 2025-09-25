@@ -8,14 +8,14 @@ document.addEventListener('DOMContentLoaded', () => {
             videoLink: "https://mega.nz/embed/mZFzVByI#UqRrLkCu1xgLcHpFKS6CUPb5lno2g6Mvjh-fbANEdoU"
         },
         {
-            name: "The New Action",
-            image: "https://placehold.co/200x200/ff5050/ffffff?text=Video+2",
-            videoLink: "https://mega.nz/embed/your_second_video_id" // ဒုတိယဗီဒီယို လင့်ခ်အစစ်ထည့်ပါ။
+            name: "The Adjustment Bureau",
+            image: "https://mmsubmovie.com/wp-content/uploads/2025/02/A4wKf04g4DCVAWC67uPGozIJPGw-200x300.jpg",
+            videoLink: "https://mega.nz/embed/mEtjxR6D#nI3JYlTXOIudI0ZM0yWY_ngH4D0PlFswvjEps5ej3uo" // ဒုတိယဗီဒီယို လင့်ခ်အစစ်ထည့်ပါ။
         },
         {
-            name: "City Lights",
-            image: "https://placehold.co/200x200/50ff50/ffffff?text=Video+3",
-            videoLink: "https://mega.nz/embed/your_third_video_id" // တတိယဗီဒီယို လင့်ခ်အစစ်ထည့်ပါ။
+            name: "Delicious Delivery",
+            image: "https://mmsubmovie.com/wp-content/uploads/2025/02/pbU2UBygdGERFZkGLRXXYlj4aVz-200x300.jpg",
+            videoLink: "https://mega.nz/embed/uY1zFIIS#Fso09aLwdQMwSLq9RQA_4Y_u-awAvmUDg9wyMmHqaBM" // တတိယဗီဒီယို လင့်ခ်အစစ်ထည့်ပါ။
         }
         // နောက်ထပ် ဗီဒီယိုထပ်ထည့်ရန်၊ ဤနေရာတွင် ကော်မာခံပြီး အလားတူ object တစ်ခု ထပ်ထည့်နိုင်ပါသည်။
         /*
