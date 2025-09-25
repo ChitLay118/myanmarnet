@@ -16,16 +16,33 @@ document.addEventListener('DOMContentLoaded', () => {
             name: "Delicious Delivery",
             image: "https://mmsubmovie.com/wp-content/uploads/2025/02/pbU2UBygdGERFZkGLRXXYlj4aVz-200x300.jpg",
             videoLink: "https://mega.nz/embed/uY1zFIIS#Fso09aLwdQMwSLq9RQA_4Y_u-awAvmUDg9wyMmHqaBM" // တတိယဗီဒီယို လင့်ခ်အစစ်ထည့်ပါ။
-        }
-        // နောက်ထပ် ဗီဒီယိုထပ်ထည့်ရန်၊ ဤနေရာတွင် ကော်မာခံပြီး အလားတူ object တစ်ခု ထပ်ထည့်နိုင်ပါသည်။
-        /*
-        ,
+        },
         {
-            name: "New Movie Title",
-            image: "https://placehold.co/200x200/50ffff/ffffff?text=Video+4",
-            videoLink: "https://mega.nz/embed/your_fourth_video_id"
+            name: "About Family",
+            image: "https://mmsubmovie.com/wp-content/uploads/2025/02/gGHrBhwk4KpWSykvdVwMfmP2C7b-200x300.jpg",
+            videoLink: "https://mega.nz/embed/nBU0XJ6Z#AGQW0L8rAl8ldfOj72kNoxiLzvmkcdTPBolrnAHkXV8"
+        },
+        {
+            name: "Balota",
+            image: "https://mmsubmovie.com/wp-content/uploads/2025/02/29IpnkqWIkFvSlynGu7X6ylAdiL-200x300.jpg",
+            videoLink: "https://mega.nz/embed/GRFX2CjK#GzEbDme5g7ET2MDNiACK6_akCK8nBBPEuctiZ75O7q8"
+        },
+        {
+            name: "The Legend of Zorro",
+            image: "https://mmsubmovie.com/wp-content/uploads/2025/02/duZDsuIA2uX93Vujtm89oHeTFqE-200x300.jpg",
+            videoLink: "https://mega.nz/embed/2RlFwIZb#CHgdn-YMkSQ5vQCm-Y4WldQTF8YpGEk0iWW2OUVNg44"
+        },
+         {
+            name: "Made in China",
+            image: "https://mmsubmovie.com/wp-content/uploads/2025/02/oxjRe2CRSblw0NmA4Uwpu9b4F0j-200x300.jpg",
+            videoLink: "https://mega.nz/embed/6AVxSQhD#yn0ypdvg7QQcmcBmxtGVRBZ3ZVY_7X-o0aBSA0g95hk"
+        },
+         {
+            name: "Faceless",
+            image: "https://mmsubmovie.com/wp-content/uploads/2025/02/llTQhKYpctLVJr3BcLbaFQt2W8a-212x300.jpg",
+            videoLink: "https://mega.nz/embed/TItERAzY#pRpLkcB3UMnBnz7sg5KxkvcOrziz5R3Xk-btKL5_sms"
         }
-        */
+       
     ];
 
     const videoPlayer = document.getElementById('videoPlayer');
