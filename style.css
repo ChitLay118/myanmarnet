@@ -12,4 +12,17 @@ body {
     position: sticky;
     top: 0;
     z-index: 10; /* Ensures it stays above other content */
+    
+    /* Desktop View အတွက် video frame အရွယ်အစားကို လျှော့ချခြင်း (75% of parent width) */
+    max-width: 100%; /* Default for mobile/small screens */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Desktop View (md breakpoint နှင့် အထက်) အတွက်သာ သက်ရောက်သည် */
+@media (min-width: 768px) {
+    .fixed-video-player {
+        /* Desktop မှာ 75% သာ ယူစေပြီး အလယ်တည့်တည့်ထားသည် */
+        max-width: 75%; 
+    }
 }
