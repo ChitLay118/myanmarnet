@@ -6,23 +6,27 @@ body {
     background-color: #f3f4f6;
 }
 
-/* Style for the fixed video player */
-.fixed-video-player {
-    /* Makes the video player sticky/fixed at the top of the viewport */
+/* Mobile View (Default behavior: Sticky) */
+.video-player-container {
+    /* Makes the video player sticky/fixed at the top for mobile devices */
     position: sticky;
     top: 0;
     z-index: 10; /* Ensures it stays above other content */
     
-    /* Desktop View အတွက် video frame အရွယ်အစားကို လျှော့ချခြင်း (75% of parent width) */
+    /* Desktop View (768px နှင့် အထက်) အတွက်သာ သက်ရောက်သည် */
     max-width: 100%; /* Default for mobile/small screens */
     margin-left: auto;
     margin-right: auto;
 }
 
-/* Desktop View (md breakpoint နှင့် အထက်) အတွက်သာ သက်ရောက်သည် */
+
+/* Desktop View (md breakpoint နှင့် အထက်) */
 @media (min-width: 768px) {
-    .fixed-video-player {
-        /* Desktop မှာ 75% သာ ယူစေပြီး အလယ်တည့်တည့်ထားသည် */
+    .video-player-container {
+        /* Desktop မှာ Sticky မဖြစ်စေရန် 'position: static' ပြန်ပြောင်းလိုက်သည် */
+        position: static; 
+        
+        /* Desktop မှာ 75% သာ ယူစေပြီး အလယ်တည့်တည့်ထားသည် (အရွယ်အစား သေးစေရန်) */
         max-width: 75%; 
     }
 }
