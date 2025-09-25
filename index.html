@@ -4,51 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ဗီဒီယိုပြခန်း</title>
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Inter Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f3f4f6;
-        }
-        /* Style for the fixed video player */
-        .fixed-video-player {
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="p-4 md:p-8">
 
-    <!-- Main Container -->
     <div class="max-w-7xl mx-auto bg-white rounded-xl shadow-lg p-6 md:p-10">
 
-        <!-- Title -->
         <h1 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-8">ဗီဒီယို ပြခန်း</h1>
 
-        <!-- Video Player Section (Now fixed at the top) -->
         <div class="fixed-video-player w-full bg-white pb-6 rounded-xl">
             <div class="relative w-full overflow-hidden rounded-xl" style="padding-top: 56.25%;">
-                <!-- Initial Mega Embed Video -->
                 <iframe id="videoPlayer" class="absolute top-0 left-0 w-full h-full" src="https://mega.nz/embed/mZFzVByI#UqRrLkCu1xgLcHpFKS6CUPb5lno2g6Mvjh-fbANEdoU" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
         
-        <!-- Add some space to avoid content being hidden under the fixed player -->
         <div class="h-64 md:h-80"></div>
 
-        <!-- Gallery Title -->
         <h2 class="text-2xl md:text-3xl font-semibold text-gray-700 mb-6 text-center">ဗီဒီယိုများ ရွေးရန်</h2>
 
-        <!-- Image Gallery Grid -->
         <div id="imageGallery" class="grid grid-cols-4 lg:grid-cols-6 gap-4">
             
-            <!-- Gallery Item 1 -->
             <div class="gallery-item cursor-pointer transform transition duration-300 hover:scale-105" 
                 data-video="https://mega.nz/embed/mZFzVByI#UqRrLkCu1xgLcHpFKS6CUPb5lno2g6Mvjh-fbANEdoU"
                 data-image="https://placehold.co/150x150/5050ff/ffffff?text=Video+1">
@@ -56,7 +35,6 @@
                 <p class="mt-2 text-center text-sm md:text-base font-medium text-gray-600">တောင်ပေါ်ခရီး</p>
             </div>
             
-            <!-- Gallery Item 2 -->
             <div class="gallery-item cursor-pointer transform transition duration-300 hover:scale-105" 
                 data-video="https://mega.nz/embed/mZFzVByI#UqRrLkCu1xgLcHpFKS6CUPb5lno2g6Mvjh-fbANEdoU"
                 data-image="https://placehold.co/150x150/ff5050/ffffff?text=Video+2">
@@ -64,7 +42,6 @@
                 <p class="mt-2 text-center text-sm md:text-base font-medium text-gray-600">ပင်လယ်ကမ်းခြေ</p>
             </div>
 
-            <!-- Gallery Item 3 -->
             <div class="gallery-item cursor-pointer transform transition duration-300 hover:scale-105" 
                 data-video="https://mega.nz/embed/mZFzVByI#UqRrLkCu1xgLcHpFKS6CUPb5lno2g6Mvjh-fbANEdoU"
                 data-image="https://placehold.co/150x150/50ff50/ffffff?text=Video+3">
@@ -72,7 +49,6 @@
                 <p class="mt-2 text-center text-sm md:text-base font-medium text-gray-600">မြို့မြင်ကွင်း</p>
             </div>
 
-            <!-- Gallery Item 4 -->
             <div class="gallery-item cursor-pointer transform transition duration-300 hover:scale-105" 
                 data-video="https://mega.nz/embed/mZFzVByI#UqRrLkCu1xgLcHpFKS6CUPb5lno2g6Mvjh-fbANEdoU"
                 data-image="https://placehold.co/150x150/ffff50/ffffff?text=Video+4">
@@ -80,7 +56,6 @@
                 <p class="mt-2 text-center text-sm md:text-base font-medium text-gray-600">သဘာဝပတ်ဝန်းကျင်</p>
             </div>
 
-            <!-- Gallery Item 5 -->
             <div class="gallery-item cursor-pointer transform transition duration-300 hover:scale-105" 
                 data-video="https://mega.nz/embed/mZFzVByI#UqRrLkCu1xgLcHpFKS6CUPb5lno2g6Mvjh-fbANEdoU"
                 data-image="https://placehold.co/150x150/50ffff/ffffff?text=Video+5">
@@ -88,7 +63,6 @@
                 <p class="mt-2 text-center text-sm md:text-base font-medium text-gray-600">မြို့တွင်းဗီဒီယို</p>
             </div>
             
-            <!-- Gallery Item 6 -->
             <div class="gallery-item cursor-pointer transform transition duration-300 hover:scale-105" 
                 data-video="https://mega.nz/embed/mZFzVByI#UqRrLkCu1xgLcHpFKS6CUPb5lno2g6Mvjh-fbANEdoU"
                 data-image="https://placehold.co/150x150/ff50ff/ffffff?text=Video+6">
@@ -100,21 +74,7 @@
 
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const videoPlayer = document.getElementById('videoPlayer');
-            const galleryItems = document.querySelectorAll('.gallery-item');
-
-            galleryItems.forEach(item => {
-                item.addEventListener('click', () => {
-                    const videoLink = item.getAttribute('data-video');
-                    if (videoLink) {
-                        videoPlayer.src = videoLink;
-                    }
-                });
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 
 </body>
 </html>
