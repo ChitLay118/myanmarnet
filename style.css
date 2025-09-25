@@ -1,9 +1,9 @@
 /* Custom styles not handled by Tailwind */
 
 body {
-    /* Sets the Inter font and a light background color */
+    /* Sets the Inter font and a custom dark background color (#1f2937 is dark blue-gray, not too black) */
     font-family: 'Inter', sans-serif;
-    background-color: #f3f4f6;
+    background-color: #1f2937; 
 }
 
 /* Mobile View (Default behavior: Sticky) */
@@ -13,8 +13,8 @@ body {
     top: 0;
     z-index: 10; /* Ensures it stays above other content */
     
-    /* Desktop View (768px နှင့် အထက်) အတွက်သာ သက်ရောက်သည် */
-    max-width: 100%; /* Default for mobile/small screens */
+    /* Default for mobile/small screens */
+    max-width: 100%; 
     margin-left: auto;
     margin-right: auto;
 }
