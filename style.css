@@ -30,3 +30,26 @@ body {
         max-width: 75%; 
     }
 }
+
+/* Custom styles for Tab Buttons */
+.tab-button {
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 500;
+    color: #9ca3af; /* gray-400 */
+    background-color: #4b5563; /* gray-600 */
+    transition: all 0.2s;
+    cursor: pointer;
+    flex-shrink: 0; /* Mobile မှာ မကျုံ့သွားစေရန် */
+}
+
+.tab-button:hover {
+    background-color: #6b7280; /* gray-500 */
+    color: #f3f4f6; /* gray-100 */
+}
+
+.tab-button.active {
+    background-color: #3b82f6; /* blue-500 */
+    color: white;
+    font-weight: 600;
+}
