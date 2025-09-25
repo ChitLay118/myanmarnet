@@ -41,6 +41,41 @@ document.addEventListener('DOMContentLoaded', () => {
             name: "Faceless",
             image: "https://mmsubmovie.com/wp-content/uploads/2025/02/llTQhKYpctLVJr3BcLbaFQt2W8a-212x300.jpg",
             videoLink: "https://mega.nz/embed/TItERAzY#pRpLkcB3UMnBnz7sg5KxkvcOrziz5R3Xk-btKL5_sms"
+        },
+         {
+            name: "Mission to Mars",
+            image: "https://mmsubmovie.com/wp-content/uploads/2025/02/beDWEWxgFlt1UWvf2al9cjDol2i-200x300.jpg",
+            videoLink: "https://mega.nz/embed/PR0WhRbZ#n_0yW9aX8WST-CEV1tKttYm1X2XEZwwLv6WftlKxWlE"
+        },
+        {
+            name: "Dark Night of the Soul",
+            image: "https://mmsubmovie.com/wp-content/uploads/2025/02/iC6llFstc5RkHthOb6pi6lwR0NM-200x300.jpg",
+            videoLink: "https://mega.nz/embed/bUciVAhI#o0dBpUZ4EabK-EsrdmAuv4M-aMwjjVXAXc7EqxFzhS0"
+        },
+        {
+            name: "Nezha: Demon Child is Back",
+            image: "https://mmsubmovie.com/wp-content/uploads/2025/02/bdhITckYK6CHhjRTYufi4As9mBM-225x300.jpg",
+            videoLink: "https://mega.nz/embed/CFEGkBoT#bYUBO4fFKxpHyJsk5nxzuurwdJu2HTRQT8AZxiOC4TY"
+        },
+        {
+            name: "New Gods: Nezha Reborn",
+            image: "https://mmsubmovie.com/wp-content/uploads/2025/02/np4ScPY04HESKBbpexwstKsipKe-210x300.jpg",
+            videoLink: "https://mega.nz/embed/XJ1WkZzI#p_qCcHMeCpcftpfkA0RjOoPVtGsg2bRwoQSuf0_nPso"
+        },
+        {
+            name: "Brothers’ Nest",
+            image: "https://mmsubmovie.com/wp-content/uploads/2025/02/b2k7IdRHHuD2HZPZMWsZzRFUHoA-200x300.jpg",
+            videoLink: "https://mega.nz/embed/3cdlxaCQ#y54CFU4jiavHyDJhbYHj1mYRUtta_uPyCZsyi63WgQ8"
+        },
+        {
+            name: "The Whole Truth",
+            image: "https://mmsubmovie.com/wp-content/uploads/2025/02/iL3Bx4YOqYdAMlx4czLyygA09MC-200x300.jpg",
+            videoLink: "https://mega.nz/embed/zRd1GAbR#TvVodEc8Xsv6m4PGjvG_DMMiQTI5s9HSxyYwRSetfJA"
+        },
+        {
+            name: "Kingdom IV",
+            image: "https://mmsubmovie.com/wp-content/uploads/2025/02/qZKKwXyZ92K0mIRpf2FbCkQa7oO-200x300.jpg",
+            videoLink: "https://mega.nz/embed/OY80HQ7L#JDp9RNRhO3iobNSYk5v9tPA3giICjm8Kxk16s0mehPU"
         }
        
     ];
