@@ -6,17 +6,24 @@ body {
     background-color: #1f2937; 
 }
 
-/* Mobile View (Default behavior: Sticky) */
+/* --- Video Player Container (Mobile Sticky, Desktop Static) --- */
 .video-player-container {
-    /* Makes the video player sticky/fixed at the top for mobile devices */
+    /* Mobile View မှာ Sticky ဖြစ်စေသည် */
     position: sticky;
     top: 0;
-    z-index: 10; /* Ensures it stays above other content */
-    
-    /* Default for mobile/small screens */
+    z-index: 10; 
     max-width: 100%; 
     margin-left: auto;
     margin-right: auto;
+}
+
+/* --- Sticky Tab Bar (Always Sticky) --- */
+.sticky-tab-bar {
+    /* Tab Bar ကို Scroll လုပ်ရင် မပါသွားစေရန် top: 0 ဖြင့် Sticky ထားသည် */
+    position: sticky;
+    top: 0;
+    z-index: 20; /* Player ထက် ပိုမြင့်ရမည် */
+    padding-top: 4px; /* Player ရဲ့ အောက်နဲ့ ကပ်နေစေရန် အနည်းငယ် ချိန်ညှိထားသည် */
 }
 
 
@@ -25,15 +32,22 @@ body {
     .video-player-container {
         /* Desktop မှာ Sticky မဖြစ်စေရန် 'position: static' ပြန်ပြောင်းလိုက်သည် */
         position: static; 
-        
-        /* Desktop မှာ 75% သာ ယူစေပြီး အလယ်တည့်တည့်ထားသည် (အရွယ်အစား သေးစေရန်) */
         max-width: 75%; 
+    }
+    
+    .sticky-tab-bar {
+         /* Desktop မှာ Tab Bar ကို Player အောက်မှာ ပုံမှန်အတိုင်း ထားရန် 'position: static' ပြန်ပြောင်းလိုက်သည် */
+        position: static;
+        padding-top: 0;
+        /* Desktop မှာ Video Player က static ဖြစ်သွားလို့ Tab bar ကိုလည်း static ပြန်ထားတာ ပိုအဆင်ပြေစေပါတယ် */
     }
 }
 
 /* Custom styles for Tab Buttons */
 .tab-button {
-    padding: 8px 16px;
+    /* flex-grow-1 ကို mobile မှာ အကျယ်ဖြန့်ရန် ထည့်သွင်းထားသည် */
+    flex-grow: 1; 
+    padding: 8px 0px; /* ဘေးဘောင် လျှော့ချထားသည် */
     border-radius: 8px;
     font-weight: 500;
     color: #9ca3af; /* gray-400 */
@@ -41,6 +55,14 @@ body {
     transition: all 0.2s;
     cursor: pointer;
     flex-shrink: 0; /* Mobile မှာ မကျုံ့သွားစေရန် */
+    text-align: center;
+    margin: 0 2px; /* ခလုတ်တစ်ခုချင်းစီကြား နေရာခွဲရန် */
+}
+
+/* Mobile View Tab Adjustments */
+#videoTabs {
+    /* Mobile မှာ tabs တွေ ကပ်နေအောင် padding ကို ဖြုတ်ပြီး justify-between ကို သုံးထားသည် */
+    padding: 0;
 }
 
 .tab-button:hover {
