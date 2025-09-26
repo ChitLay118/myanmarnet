@@ -14,10 +14,9 @@
             theme: {
                 extend: {
                     colors: {
-                        // Custom dark background colors for better aesthetics
-                        'dark-bg-main': '#0f172a', // Slate 900 - အလွန်နက်မှောင်သော နောက်ခံ
-                        'dark-bg-card': '#1e293b', // Slate 800 - ကတ် အတွင်းခံ
-                        'dark-bg-accent': '#334155', // Slate 700 - Tab ၏ နောက်ခံ
+                        'dark-bg-main': '#0f172a', // Slate 900
+                        'dark-bg-card': '#1e293b', // Slate 800
+                        'dark-bg-accent': '#334155', // Slate 700
                         'accent-blue': '#3b82f6', // Blue 500
                         'text-light': '#f1f5f9', // Slate 100
                     }
@@ -26,34 +25,48 @@
         }
     </script>
 </head>
-<body class="p-0 md:p-8 bg-dark-bg-main min-h-screen">
+<body class="bg-dark-bg-main min-h-screen">
 
-    <div class="max-w-7xl mx-auto bg-dark-bg-card rounded-xl shadow-2xl p-4 md:p-10 mb-20 md:mb-0">
-
-        <h1 class="text-3xl md:text-4xl font-bold text-center text-text-light mt-4 mb-2">WY MovieBox</h1>
-        <h2 class="text-xs md:text-sm font-light text-center text-gray-400 mb-8">c388925@gmail.com</h2>
-
-        <div class="video-player-container w-full bg-dark-bg-card pb-0 rounded-xl">
-            <div class="relative w-full overflow-hidden rounded-xl shadow-2xl" style="padding-top: 56.25%;">
-                <iframe id="videoPlayer" class="absolute top-0 left-0 w-full h-full" 
-                        src="https://res.cloudinary.com/drizdw5nc/video/upload/v1758620300/video_2025-09-23_16-38-00_r3ow5d.mp4" 
-                        frameborder="0" allowfullscreen 
-                        allow="autoplay; fullscreen; picture-in-picture; gyroscope; accelerometer;"></iframe>
+    <div id="videoPlayerContainer" class="fixed-player-container w-full z-40">
+        <div class="max-w-7xl mx-auto p-0 md:p-4">
+            <div class="video-player-inner-wrapper w-full bg-dark-bg-card rounded-xl shadow-2xl overflow-hidden">
+                <div class="md:hidden text-center pt-2 pb-1 bg-dark-bg-card">
+                    <h1 class="text-2xl font-bold text-text-light">WY MovieBox</h1>
+                    <h2 class="text-xs font-light text-gray-400">c388925@gmail.com</h2>
+                </div>
+                
+                <div class="relative w-full overflow-hidden" style="padding-top: 56.25%;">
+                    <iframe id="videoPlayer" class="absolute top-0 left-0 w-full h-full" 
+                            src="https://res.cloudinary.com/drizdw5nc/video/upload/v1758620300/video_2025-09-23_16-38-00_r3ow5d.mp4" 
+                            frameborder="0" allowfullscreen 
+                            allow="autoplay; fullscreen; picture-in-picture; gyroscope; accelerometer;"></iframe>
+                </div>
             </div>
         </div>
+    </div>
+    
+    <div class="hidden md:block max-w-7xl mx-auto pt-4 pb-2 text-center mt-20 md:mt-0 desktop-title-bar">
+        <h1 class="text-4xl font-bold text-text-light mt-4 mb-2">WY MovieBox</h1>
+        <h2 class="text-sm font-light text-center text-gray-400 mb-8">c388925@gmail.com</h2>
+    </div>
+
+
+    <div class="main-content-area max-w-7xl mx-auto p-4 md:p-10 mb-20 md:mb-0">
         
         <h2 class="text-xl md:text-3xl font-semibold text-gray-200 mt-6 mb-4 text-center">ဗီဒီယိုများ ရွေးရန်</h2>
 
-        <div id="imageGallery" class="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6">
+        <div class="md:flex md:space-x-4">
+            <div id="stickyTabBar" class="sticky-tab-bar w-full fixed bottom-0 left-0 right-0 z-50 md:static md:w-1/5 md:flex-shrink-0">
+                 <div class="max-w-7xl mx-auto p-2 bg-dark-bg-main md:bg-transparent">
+                     <div id="videoTabs" class="flex justify-start overflow-x-auto space-x-1 px-0 md:flex-col md:space-x-0 md:space-y-2 md:p-2 bg-dark-bg-accent md:bg-dark-bg-card rounded-xl shadow-2xl border-t md:border-t-0 border-gray-700">
+                        </div>
+                 </div>
             </div>
 
-    </div>
-
-    <div id="stickyTabBar" class="sticky-tab-bar w-full fixed bottom-0 left-0 right-0 md:static md:mt-8 z-50">
-         <div class="max-w-7xl mx-auto p-2 bg-dark-bg-main md:bg-transparent">
-             <div id="videoTabs" class="flex justify-center items-center w-full space-x-1 md:space-x-4 px-0 md:p-2 bg-dark-bg-accent md:bg-dark-bg-card rounded-xl shadow-2xl border-t md:border-t-0 border-gray-700">
+            <div id="imageGallery" class="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 md:gap-6 md:w-4/5">
                 </div>
-         </div>
+        </div>
+
     </div>
 
     <script src="script.js"></script>
