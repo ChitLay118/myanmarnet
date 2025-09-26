@@ -35,7 +35,7 @@ body {
     z-index: 50; 
     background-color: #0f172a; /* Main Background Color */
     padding: 8px 0;
-    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5); /* အပေါ်ဘက်တွင် အရိပ်ခတ်ထားသည် */
+    box-shadow: 0 -4px 5px rgba(0, 0, 0, 0.5); /* အပေါ်ဘက်တွင် အရိပ်ခတ်ထားသည် */
 }
 
 
