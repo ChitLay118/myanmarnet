@@ -39,30 +39,31 @@ body {
          /* Desktop မှာ Tab Bar ကို Player အောက်မှာ ပုံမှန်အတိုင်း ထားရန် 'position: static' ပြန်ပြောင်းလိုက်သည် */
         position: static;
         padding-top: 0;
-        /* Desktop မှာ Video Player က static ဖြစ်သွားလို့ Tab bar ကိုလည်း static ပြန်ထားတာ ပိုအဆင်ပြေစေပါတယ် */
     }
 }
 
 /* Custom styles for Tab Buttons */
 .tab-button {
-    /* flex-grow-1 ကို mobile မှာ အကျယ်ဖြန့်ရန် ထည့်သွင်းထားသည် */
-    flex-grow: 1; 
-    padding: 8px 0px; /* ဘေးဘောင် လျှော့ချထားသည် */
+    /* ***** ပြင်ဆင်ချက်: အလယ်ကျစေရန် flex-grow ဖယ်ပြီး min-width ပေးထားသည် ***** */
+    /* flex-grow: 1;  (ယခင်က Mobile မှာ အကျယ်ဖြန့်ရန် ထည့်သွင်းထားသည်) */
+    min-width: 15%; /* Mobile မှာ Tab ၆ ခု အလယ်တည့်တည့်ကျအောင် နေရာပေးလိုက်သည် */
+    padding: 8px 0px; 
     border-radius: 8px;
     font-weight: 500;
     color: #9ca3af; /* gray-400 */
     background-color: #4b5563; /* gray-600 */
     transition: all 0.2s;
     cursor: pointer;
-    flex-shrink: 0; /* Mobile မှာ မကျုံ့သွားစေရန် */
+    flex-shrink: 0; 
     text-align: center;
     margin: 0 2px; /* ခလုတ်တစ်ခုချင်းစီကြား နေရာခွဲရန် */
 }
 
 /* Mobile View Tab Adjustments */
 #videoTabs {
-    /* Mobile မှာ tabs တွေ ကပ်နေအောင် padding ကို ဖြုတ်ပြီး justify-between ကို သုံးထားသည် */
+    /* Mobile မှာ Tabs တွေ အလယ်ကျသွားအောင် justify-center ကို HTML မှာ ထည့်ပြီးပြီ */
     padding: 0;
+    max-width: 100%; /* Tab container က screen width ထက် မပိုစေရန် */
 }
 
 .tab-button:hover {
