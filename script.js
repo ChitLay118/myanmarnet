@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 2. BOLLYWOOD Videos
     const bollywoodVideos = [
-        { name: "Balota", image: "https://mmsubmovie.com/wp-content/uploads/2025/02/29IpnkqWIkFvSlynGu7X7ylAdiL-200x300.jpg", videoLink: "https://mega.nz/embed/GRFX2CjK#GzEbDme5g7ET2MDNiACK6_akCK8nBBPEuctiZ75O7q8" },
+        { name: "Balota", image: "https://mmsubmovie.com/wp-content/uploads/2025/02/29IpnkqWIkFvSlynGu7X6ylAdiL-200x300.jpg", videoLink: "https://mega.nz/embed/GRFX2CjK#GzEbDme5g7ET2MDNiACK6_akCK8nBBPEuctiZ75O7q8" },
         { name: "Soorarai Pottru", image: "https://mmsubmovie.com/wp-content/uploads/2025/09/5uimlxPCgAei8JfQUDFEUQLoyyh-200x300.jpg", videoLink: "https://mega.nz/embed/3c8GwTzK#qEcN3h3CM_dzWXwi3NQEr0DBITwQSVKjMVObGWqowBA" },
         { name: "Maa", image: "https://mmsubmovie.com/wp-content/uploads/2025/09/kc5n7LJUmvBsVxzAla1ONN8kouP-200x300.jpg", videoLink: "https://mega.nz/embed/mR9DDbSD#z8gTuRMxFVeGB7Q8mphs9X8g1HPJkAtZ0ftOitfi6fE" },
         { name: "Godse", image: "https://mmsubmovie.com/wp-content/uploads/2025/09/cR9NesoY99WGQtQPViwbbthAWnt-200x300.jpg", videoLink: "https://mega.nz/embed/eo43SCJZ#5FuyVAlSYCCuNLjvgvcRpEayjJUM1kE3M4vfvPaT4cs" },
@@ -142,7 +142,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const videoPlayer = document.getElementById('videoPlayer');
     const imageGallery = document.getElementById('imageGallery');
     const videoTabs = document.getElementById('videoTabs');
-    const mainContentArea = document.querySelector('.main-content-area');
     
     //  Tab စာရင်း (မြန်မာ ပါဝင်သည်) 
     const categories = ["Action", "Bollywood", "Drama", "မြန်မာ", "Adult", "Cartoon"];
@@ -175,10 +174,10 @@ document.addEventListener('DOMContentLoaded', () => {
             item.className = 'gallery-item cursor-pointer transform transition duration-300 hover:scale-105';
             item.setAttribute('data-video', video.videoLink);
             
-            // Mega Link, YouTube Link သုံးနိုင်သည်။
-            const videoSrc = video.videoLink.includes('mega.nz/embed') || video.videoLink.includes('youtube.com/embed')
+            // Mega Link ဖြစ်မဖြစ် စစ်ပြီး <iframe> တွင် အသုံးပြုရန် src attribute တွင် သတ်မှတ်သည်
+            const videoSrc = video.videoLink.includes('mega.nz/embed') 
                 ? video.videoLink 
-                : video.videoLink; // အခြား embed link များအတွက်
+                : video.videoLink; // YouTube embed link အတွက် ပြောင်းလဲစရာမလို
             
             // Content (ပုံ နှင့် နာမည်) ကို ထည့်သွင်းသည်။
             item.innerHTML = `
@@ -188,14 +187,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Click Event ကို တွဲပေးသည်။ (ဗီဒီယိုပြောင်းလဲရန်)
             item.addEventListener('click', () => {
+                const videoPlayer = document.getElementById('videoPlayer');
                 // ဗီဒီယို Link ကို iframe ရဲ့ src ထဲကို တိုက်ရိုက်ထည့်ပေးသည်
                 videoPlayer.src = videoSrc;
-                
-                // ဗီဒီယို ပြောင်းပြီးနောက် Gallery အပေါ်ဆုံးသို့ ပြန်ရွှေ့ရန်
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
             });
 
             // Gallery Container ထဲသို့ ထည့်သွင်းသည်။
@@ -231,11 +225,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 currentCategory = category;
                 renderGallery(currentCategory);
                 
-                // Tab ပြောင်းတာနဲ့ Gallery ရဲ့ အပေါ်ဆုံးကို scroll ပြန်လုပ်ပေးဖို့
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
+                // Mobile မှာ Tab ပြောင်းတာနဲ့ Gallery ရဲ့ အပေါ်ဆုံးကို scroll ပြန်လုပ်ပေးဖို့
+                if (window.innerWidth < 768) {
+                    const mainContainer = document.querySelector('.max-w-7xl');
+                    mainContainer.scrollTop = 0;
+                }
             });
 
             videoTabs.appendChild(button);
