@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: "Satyameva Jayate 2", image: "https://mmsubmovie.com/wp-content/uploads/2025/08/y1ebOObyi97slwBTljIifE67PR5-200x300.jpg", videoLink: "https://mega.nz/embed/OlFBjJQT#ZxNyWx6wkxDhksJXsRHhd4Bdmq1hTdKSwo9Uo_ow-Y4" },
         { name: "Satyameva Jayate", image: "https://mmsubmovie.com/wp-content/uploads/2025/08/4cgcfxYE1UoNGISx9CrdhuKsXe3-200x300.jpg", videoLink: "https://mega.nz/embed/WosQkajb#0hS2A9GjYsLA7YdVf9QiZMbInH0bMlbWzfH0ynLm-Fk" },
         { name: "Flight", image: "https://mmsubmovie.com/wp-content/uploads/2025/08/cTidclJOxLIwqmV4zzMSs8goTu1-200x300.jpg", videoLink: "https://mega.nz/embed/L9pzjbgJ#dR89fgSLsFt6qpIWE-FjOSXZTvU9pHpubAoCtvk_59s" },
-        { name: "Kalki 2898-AD", image: "https://mmsubmovie.com/wp-content/uploads/2025/08/rstcAnBeCkxNQjNp3YXrF6IP1tW-200x300.jpg", videoLink: "https://mega.nz/embed/vd1RgTDB#E7NyoASfgVsN_xgOF5sHr-m9fds2_CWmiR2Lz3EtxMQ" },
+        { name: "Kalki 2898-AD", image: "https://mmsubmovie.com/wp-content/uploads/2025/08/rstcAnBeCkxNQzNp3YXrF6IP1tW-200x300.jpg", videoLink: "https://mega.nz/embed/vd1RgTDB#E7NyoASfgVsN_xgOF5sHr-m9fds2_CWmiR2Lz3EtxMQ" },
         { name: "Karamsutra", image: "https://mmsubmovie.com/wp-content/uploads/2025/08/akxdNCJQ3wh0bRLRl2p7VaICRXe-200x300.jpg", videoLink: "https://mega.nz/embed/7xBUCabJ#PWGNIGJ3RXobPShScADer0BSZxlnUxz5lTju51zGER8" },
         { name: "Taandob", image: "https://mmsubmovie.com/wp-content/uploads/2025/08/iplMLlXU1BgmTz4xviILTOlECYL-200x300.jpg", videoLink: "https://mega.nz/embed/Z7t0SS7T#xDdr1dNg3_fR9hLJl4cCF8Q_ynECsbUoDlC49mVGNfs" },
         { name: "Six Each", image: "https://mmsubmovie.com/wp-content/uploads/2025/08/mSUD3y15nNurCWZv2DyJwalWo2Z-200x300.jpg", videoLink: "https://mega.nz/embed/MukDjIIS#9aOxbVCc03L3ojL2wtPwB63JRjPHvzJBajOHiZZtgAk" },
@@ -49,50 +49,51 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: "Sikandar Ka Muqaddar", image: "https://mmsubmovie.com/wp-content/uploads/2025/08/eWUh4rgxtgypgnOa6uGMnUt01ux-200x300.jpg", videoLink: "https://mega.nz/embed/TYl0wJjD#FP7hZmf1xhJFh5_lePbDDIi7sjJ_xqRevCYvchccYyA" },
         { name: "100% Love", image: "https://mmsubmovie.com/wp-content/uploads/2025/08/xDuAT2K7kcN2kM9BP9lwwNqNWCD-200x300.jpg", videoLink: "https://mega.nz/embed/MhJ3yB7I#3XkLJdNYpUH_YIjCCGM-ePOQwZOASwCAq8O9GVfAGPA" },
         { name: "Hindi Medium", image: "https://mmsubmovie.com/wp-content/uploads/2025/08/2v0nQd3kYBV0iPNCVHiaLWGb1hg-200x300.jpg", videoLink: "https://mega.nz/embed/T7QSzB5R#6whukILXSpz8TG8RQ5wRQbIeogwcEf57_WKV2QxdXzw" },
-                
     ];
     
-    // 3. DRAMA Videos (အသစ်ထည့်ထားသည်)
+    // 3. DRAMA Videos
     const dramaVideos = [
         { name: "About Family (Korea)", image: "https://mmsubmovie.com/wp-content/uploads/2025/02/gGHrBhwk4KpWSykvdVwMfmP2C7b-200x300.jpg", videoLink: "https://mega.nz/embed/nBU0XJ6Z#AGQW0L8rAl8ldfOj72kNoxiLzvmkcdTPBolrnAHkXV8" },
         { name: "The Whole Truth (Thriller/Drama)", image: "https://mmsubmovie.com/wp-content/uploads/2025/02/iL3Bx4YOqYdAMlx4czLyygA09MC-200x300.jpg", videoLink: "https://mega.nz/embed/zRd1GAbR#TvVodEc8Xsv6m4PGjvG_DMMiQTI5s9HSxyYwRSetfJA" },
         { name: "မဟူရာရုပ်ရှင်ရုံ (စ/ဆုံး)", image: "https://i.ytimg.com/vi/IdeH-gD3jHw/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDydZr-LqUWkYYeBsERvvNLeR2vzg", videoLink: "https://www.youtube.com/embed/IdeH-gD3jHw"},
-       
-        // လိုအပ်ရင် ဒီမှာ Drama ဗီဒီယိုတွေ ထပ်ထည့်ပါ
-        // { name: "New Drama Movie", image: "your_image_link", videoLink: "your_mega_link" },
+        // ဒီမှာ Drama ဗီဒီယိုတွေ ထပ်ထည့်ပါ
     ];
 
-    // 4. ADULT Videos
+    // 4. မြန်မာ Videos (အသစ်ထပ်တိုး)
+    const myanmarVideos = [
+        { name: "ဗိုလ်နေတိုး", image: "https://i.ytimg.com/vi/j3hU9uT7iE8/hq720.jpg", videoLink: "https://www.youtube.com/embed/j3hU9uT7iE8" },
+        { name: "ပန်းပန်လျှက်ပါ", image: "https://i.ytimg.com/vi/R2d3rC7XyS0/hq720.jpg", videoLink: "https://www.youtube.com/embed/R2d3rC7XyS0" },
+        // ဒီမှာ မြန်မာဗီဒီယိုတွေ ထပ်ထည့်ပါ
+        // { name: "အသစ်ထပ်ထည့်မည့်မြန်မာကား", image: "your_image_link", videoLink: "your_mega_link" },
+    ];
+
+
+    // 5. ADULT Videos
     const adultVideos = [
         { name: "Adult Clip 1", image: "https://placehold.co/200x200/505050/ffffff?text=Adult+1", videoLink: "https://mega.nz/embed/adult_video_1_link" },
     ];
 
-    // 5. CARTOON Videos
+    // 6. CARTOON Videos
     const cartoonVideos = [
         { name: "Nezha: Demon Child is Back", image: "https://mmsubmovie.com/wp-content/uploads/2025/02/bdhITckYK6CHhjRTYufi4As9mBM-225x300.jpg", videoLink: "https://mega.nz/embed/CFEGkBoT#bYUBO4fFKxpHyJsk5nxzuurwdJu2HTRQT8AZxiOC4TY" },
         { name: "New Gods: Nezha Reborn", image: "https://mmsubmovie.com/wp-content/uploads/2025/02/np4ScPY04HESKBbpexwstKsipKe-210x300.jpg", videoLink: "https://mega.nz/embed/XJ1WkZzI#p_qCcHMeCpcftpfkA0RjOoPVtGsg2bRwoQSuf0_nPso" },
     ];
     
-    // Tab တွင် မပါသော်လည်း Data ရှိနေသေးသော ဗီဒီယိုများ (Filtering Logic တွင် မပေါ်စေပါ)
-    // const otherVideos = [
-    //     { name: "Delicious Delivery", category: "Comedy", image: "...", videoLink: "..." },
-    //     { name: "Faceless", category: "Horror", image: "...", videoLink: "..." },
-    // ];
-
 
     const videoPlayer = document.getElementById('videoPlayer');
     const imageGallery = document.getElementById('imageGallery');
     const videoTabs = document.getElementById('videoTabs');
     
-    // ** Tab စာရင်း (အသစ်ထပ်တိုး Drama ပါဝင်သည်) **
-    const categories = ["Action", "Bollywood", "Drama", "Adult", "Cartoon"];
+    // ** Tab စာရင်း (မြန်မာ ပါဝင်သည်) **
+    const categories = ["Action", "Bollywood", "Drama", "မြန်မာ", "Adult", "Cartoon"];
     let currentCategory = "Action"; // Default အနေဖြင့် Action ကို စတင်ပြသမည်
     
     // ** Category Name ကို သက်ဆိုင်ရာ Video Array နှင့် တွဲပေးသည် **
     const categoryMap = {
         "Action": actionVideos,
         "Bollywood": bollywoodVideos,
-        "Drama": dramaVideos, // Drama အသစ်ထည့်ထားသည်
+        "Drama": dramaVideos,
+        "မြန်မာ": myanmarVideos, // မြန်မာ Array ကို တွဲပေးလိုက်သည်
         "Adult": adultVideos,
         "Cartoon": cartoonVideos,
     };
@@ -114,7 +115,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const item = document.createElement('div');
             item.className = 'gallery-item cursor-pointer transform transition duration-300 hover:scale-105';
             item.setAttribute('data-video', video.videoLink);
-
+            
+            // Mega Link ဖြစ်မဖြစ် စစ်ပြီး <iframe> တွင် အသုံးပြုရန် src attribute တွင် သတ်မှတ်သည်
+            const videoSrc = video.videoLink.includes('mega.nz/embed') 
+                ? video.videoLink 
+                : video.videoLink; // YouTube embed link အတွက် ပြောင်းလဲစရာမလို
+            
             // Content (ပုံ နှင့် နာမည်) ကို ထည့်သွင်းသည်။
             item.innerHTML = `
                 <img src="${video.image}" alt="${video.name}" class="w-full h-auto rounded-lg shadow-md object-cover">
@@ -123,7 +129,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Click Event ကို တွဲပေးသည်။ (ဗီဒီယိုပြောင်းလဲရန်)
             item.addEventListener('click', () => {
-                videoPlayer.src = video.videoLink;
+                const videoPlayer = document.getElementById('videoPlayer');
+                // ဗီဒီယို Link ကို iframe ရဲ့ src ထဲကို တိုက်ရိုက်ထည့်ပေးသည်
+                videoPlayer.src = videoSrc;
             });
 
             // Gallery Container ထဲသို့ ထည့်သွင်းသည်။
