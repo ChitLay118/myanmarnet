@@ -56,6 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const dramaVideos = [
         { name: "About Family (Korea)", image: "https://mmsubmovie.com/wp-content/uploads/2025/02/gGHrBhwk4KpWSykvdVwMfmP2C7b-200x300.jpg", videoLink: "https://mega.nz/embed/nBU0XJ6Z#AGQW0L8rAl8ldfOj72kNoxiLzvmkcdTPBolrnAHkXV8" },
         { name: "The Whole Truth (Thriller/Drama)", image: "https://mmsubmovie.com/wp-content/uploads/2025/02/iL3Bx4YOqYdAMlx4czLyygA09MC-200x300.jpg", videoLink: "https://mega.nz/embed/zRd1GAbR#TvVodEc8Xsv6m4PGjvG_DMMiQTI5s9HSxyYwRSetfJA" },
+        { name: "မဟူရာရုပ်ရှင်ရုံ (စ/ဆုံး)", image: "https://i.ytimg.com/vi/IdeH-gD3jHw/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDydZr-LqUWkYYeBsERvvNLeR2vzg", videoLink: "https://www.youtube.com/embed/IdeH-gD3jHw"},
+       
         // လိုအပ်ရင် ဒီမှာ Drama ဗီဒီယိုတွေ ထပ်ထည့်ပါ
         // { name: "New Drama Movie", image: "your_image_link", videoLink: "your_mega_link" },
     ];
