@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     
     // =========================================================
-    // ** လွယ်ကူသော ဗီဒီယို အချက်အလက်များ (Category အလိုက် ခွဲထားသည်) **
+    //  လွယ်ကူသော ဗီဒီယို အချက်အလက်များ (Category အလိုက် ခွဲထားသည်) 
     // =========================================================
     
     // 1. ACTION Videos
@@ -66,7 +66,6 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: "Broken Sword Hero", image: "https://mmsubmovie.com/wp-content/uploads/2025/08/qWsGQKgrp6wpFXO8ShPbZgpdXDa-200x300.jpg", videoLink: "https://mega.nz/embed/CFNAkAgT#6uE-kFZmNGgpIB3_QH0owhKcEkfE-Bg-fUFWCrJmr4U" },
         { name: "Atlas", image: "https://mmsubmovie.com/wp-content/uploads/2025/08/bcM2Tl5HlsvPBnL8DKP9Ie6vU4r-200x300.jpg", videoLink: "https://mega.nz/embed/mYF1VZKY#yGrndy7HOHKekDIqAgrhgr3sHpBgHYC-y5JX7RkIRB0" },
         { name: "Shang-Chi", image: "https://mmsubmovie.com/wp-content/uploads/2025/08/d08HqqeBQSwN8i8MEvpsZ8Cb438-200x300.jpg", videoLink: "https://mega.nz/embed/OgdFBT7R#OG2XlCNKdUAQB0FmNm8U4-dfgqI8VhlDcajCQ0TMZyg" },
-        
     ];
 
     // 2. BOLLYWOOD Videos
@@ -107,12 +106,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const dramaVideos = [
         { name: "About Family (Korea)", image: "https://mmsubmovie.com/wp-content/uploads/2025/02/gGHrBhwk4KpWSykvdVwMfmP2C7b-200x300.jpg", videoLink: "https://mega.nz/embed/nBU0XJ6Z#AGQW0L8rAl8ldfOj72kNoxiLzvmkcdTPBolrnAHkXV8" },
         { name: "The Whole Truth (Thriller/Drama)", image: "https://mmsubmovie.com/wp-content/uploads/2025/02/iL3Bx4YOqYdAMlx4czLyygA09MC-200x300.jpg", videoLink: "https://mega.nz/embed/zRd1GAbR#TvVodEc8Xsv6m4PGjvG_DMMiQTI5s9HSxyYwRSetfJA" },
-        
         // ဒီမှာ Drama ဗီဒီယိုတွေ ထပ်ထည့်ပါ
     ];
 
     // 4. မြန်မာ Videos (အသစ်ထပ်တိုး)
     const myanmarVideos = [
+        // မဟူရာရုပ်ရှင်ရုံ ကို Drama ကနေ ဒီကိုရွှေ့လိုက်သည်
         { name: "မဟူရာရုပ်ရှင်ရုံ (နေတိုး)", image: "https://i.ytimg.com/vi/IdeH-gD3jHw/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDydZr-LqUWkYYeBsERvvNLeR2vzg", videoLink: "https://www.youtube.com/embed/IdeH-gD3jHw"},
         { name: "မိုးမခဓားသမား(နေထူးနိုင်)", image: "https://i.ytimg.com/vi/hidxwHpKAOI/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLCfFCSGtlsbq8amZnpz8PavHzWS9A", videoLink: "https://www.youtube.com/embed/hidxwHpKAOI?list=PL3IBGpSJCCYDkgEaFgfBawBzaqFcQstW-"},
         { name: "ရှိုးမထုတ်တဲ့ဖိုးရှုပ်(နေထူးနိုင်)", image: "https://i.ytimg.com/vi/AXG-1PMRUow/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLAw0f0JPuEeE9vq9ImtqLYu54Toyg", videoLink: "https://www.youtube.com/embed/AXG-1PMRUow?list=PL3IBGpSJCCYDkgEaFgfBawBzaqFcQstW-"},
@@ -125,7 +124,6 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: "ဒီကောင်ဘယ်သူတုန်း(နေတိုး)", image: "https://i.ytimg.com/vi/e4oetvhOSgI/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLB68mt_aWu4C02ZaW8KFDXyoW7Gsg", videoLink: "https://www.youtube.com/embed/e4oetvhOSgI?list=PLkQrCHWyqYFlxbGMVqwfl4opvbkATpCu7"},
         { name: "တာတေကြီး(နေတိုး)", image: "https://i.ytimg.com/vi/3fQUxZgFD9U/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLBMe2zmuLrJsKHhbVkZkw-AOKVweQ", videoLink: "https://www.youtube.com/embed/3fQUxZgFD9U?list=PLkQrCHWyqYFlxbGMVqwfl4opvbkATpCu7"},
         // ဒီမှာ မြန်မာဗီဒီယိုတွေ ထပ်ထည့်ပါ
-        // { name: "အသစ်ထပ်ထည့်မည့်မြန်မာကား", image: "your_image_link", videoLink: "your_mega_link" },
     ];
 
 
@@ -145,11 +143,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const imageGallery = document.getElementById('imageGallery');
     const videoTabs = document.getElementById('videoTabs');
     
-    // ** Tab စာရင်း (မြန်မာ ပါဝင်သည်) **
+    //  Tab စာရင်း (မြန်မာ ပါဝင်သည်) 
     const categories = ["Action", "Bollywood", "Drama", "မြန်မာ", "Adult", "Cartoon"];
     let currentCategory = "Action"; // Default အနေဖြင့် Action ကို စတင်ပြသမည်
     
-    // ** Category Name ကို သက်ဆိုင်ရာ Video Array နှင့် တွဲပေးသည် **
+    //  Category Name ကို သက်ဆိုင်ရာ Video Array နှင့် တွဲပေးသည် 
     const categoryMap = {
         "Action": actionVideos,
         "Bollywood": bollywoodVideos,
@@ -159,8 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Cartoon": cartoonVideos,
     };
 
-
-    // --- Gallery Items များကို ဖန်တီးသည် ---
+// --- Gallery Items များကို ဖန်တီးသည် ---
     
     /**
      * Gallery Items များကို ဖန်တီးပြီး HTML ထဲသို့ ထည့်သွင်းပေးသည့် function
@@ -227,6 +224,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 // ရွေးချယ်ထားသော Category ဖြင့် Gallery ကို ပြန်လည်ပြသခြင်း
                 currentCategory = category;
                 renderGallery(currentCategory);
+                
+                // Mobile မှာ Tab ပြောင်းတာနဲ့ Gallery ရဲ့ အပေါ်ဆုံးကို scroll ပြန်လုပ်ပေးဖို့
+                if (window.innerWidth < 768) {
+                    const mainContainer = document.querySelector('.max-w-7xl');
+                    mainContainer.scrollTop = 0;
+                }
             });
 
             videoTabs.appendChild(button);
