@@ -1,78 +1,157 @@
 /* Custom styles not handled by Tailwind */
 
 body {
-    /* Sets the Inter font and a custom dark background color (#1f2937 is dark blue-gray, not too black) */
     font-family: 'Inter', sans-serif;
-    background-color: #1f2937; 
+    background-color: #0f172a; 
+    min-height: 100vh;
 }
 
-/* --- Video Player Container (Mobile Sticky, Desktop Static) --- */
-.video-player-container {
-    /* Mobile View မှာ Sticky ဖြစ်စေသည် */
-    position: sticky;
+/* --- Mobile View (Default: max-width 767px) --- */
+
+/* Mobile: Player Container is fixed at the top, full width */
+.fixed-player-container {
+    position: fixed;
     top: 0;
-    z-index: 10; 
-    max-width: 100%; 
-    margin-left: auto;
-    margin-right: auto;
+    left: 0;
+    right: 0;
+    padding: 0;
+    background-color: #0f172a; /* Player နောက်ခံအရောင် */
+    height: 150px; /* Adjust height for the player + title */
 }
 
-/* --- Sticky Tab Bar (Always Sticky) --- */
+/* Mobile: Tab Bar is fixed at the bottom */
 .sticky-tab-bar {
-    /* Tab Bar ကို Scroll လုပ်ရင် မပါသွားစေရန် top: 0 ဖြင့် Sticky ထားသည် */
-    position: sticky;
-    top: 0;
-    z-index: 20; /* Player ထက် ပိုမြင့်ရမည် */
-    padding-top: 4px; /* Player ရဲ့ အောက်နဲ့ ကပ်နေစေရန် အနည်းငယ် ချိန်ညှိထားသည် */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 50; 
+    background-color: #0f172a; /* Main Background Color */
+    padding: 8px 0;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5); 
 }
 
-
-/* Desktop View (md breakpoint နှင့် အထက်) */
-@media (min-width: 768px) {
-    .video-player-container {
-        /* Desktop မှာ Sticky မဖြစ်စေရန် 'position: static' ပြန်ပြောင်းလိုက်သည် */
-        position: static; 
-        max-width: 75%; 
-    }
-    
-    .sticky-tab-bar {
-         /* Desktop မှာ Tab Bar ကို Player အောက်မှာ ပုံမှန်အတိုင်း ထားရန် 'position: static' ပြန်ပြောင်းလိုက်သည် */
-        position: static;
-        padding-top: 0;
-    }
+/* Mobile: Main Content Area (Gallery) padding-top for spacing below fixed player */
+.main-content-area {
+    /* Height of fixed player (150px) + Title/Email height (approx 50px) + Extra margin */
+    padding-top: 180px; 
+    padding-bottom: 80px; /* Space for the fixed bottom tab bar */
+    min-height: 100vh;
 }
 
-/* Custom styles for Tab Buttons */
+/* Custom styles for Tab Buttons - Mobile */
 .tab-button {
-    /* ***** ပြင်ဆင်ချက်: အလယ်ကျစေရန် flex-grow ဖယ်ပြီး min-width ပေးထားသည် ***** */
-    /* flex-grow: 1;  (ယခင်က Mobile မှာ အကျယ်ဖြန့်ရန် ထည့်သွင်းထားသည်) */
-    min-width: 15%; /* Mobile မှာ Tab ၆ ခု အလယ်တည့်တည့်ကျအောင် နေရာပေးလိုက်သည် */
-    padding: 8px 0px; 
-    border-radius: 8px;
+    min-width: 20%; 
+    padding: 8px 4px; 
+    border-radius: 6px;
+    font-size: 0.75rem; 
     font-weight: 500;
-    color: #9ca3af; /* gray-400 */
-    background-color: #4b5563; /* gray-600 */
+    color: #94a3b8; 
+    background-color: #334155; 
     transition: all 0.2s;
     cursor: pointer;
     flex-shrink: 0; 
     text-align: center;
-    margin: 0 2px; /* ခလုတ်တစ်ခုချင်းစီကြား နေရာခွဲရန် */
+    margin: 0 2px; 
 }
 
-/* Mobile View Tab Adjustments */
-#videoTabs {
-    /* Mobile မှာ Tabs တွေ အလယ်ကျသွားအောင် justify-center ကို HTML မှာ ထည့်ပြီးပြီ */
-    padding: 0;
-    max-width: 100%; /* Tab container က screen width ထက် မပိုစေရန် */
+
+/* --- Desktop View (min-width 768px) --- */
+@media (min-width: 768px) {
+    /* Desktop: Small Fixed Player (Top Right) */
+    .fixed-player-container {
+        position: fixed;
+        top: 20px; /* မျက်နှာပြင် အပေါ်မှ အကွာအဝေး */
+        right: 20px; /* မျက်နှာပြင် ညာဘက်မှ အကွာအဝေး */
+        left: unset;
+        width: 350px; /* ကစားသမား၏ အကျယ် (သေးငယ်သည်) */
+        height: auto;
+        padding: 0;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    }
+    
+    /* Desktop: Main Content Area (Gallery) padding-top - No need for big gap */
+    .main-content-area {
+        padding-top: 2.5rem; /* ပုံမှန် padding */
+        padding-bottom: 2.5rem;
+        min-height: unset;
+    }
+    
+    /* Desktop: Tab Bar is Static (Part of the flow, no fixed position) */
+    .sticky-tab-bar {
+        position: static;
+        padding: 0;
+        box-shadow: none;
+        background-color: transparent;
+        margin-top: 1rem;
+        width: 100%; /* Tab container width */
+        max-width: 200px; /* Tab Column width */
+    }
+    
+    /* Desktop: Tab Button (Vertical) */
+     .tab-button {
+        font-size: 1rem; 
+        padding: 10px 16px; 
+        min-width: unset;
+        margin: 0; /* No horizontal margin for vertical stack */
+        width: 100%;
+        text-align: left; /* Text to the left */
+    }
+    
+    /* Desktop: Hide the mobile-only title/email inside the player */
+    .md\:hidden {
+        display: none !important;
+    }
+
+    /* Desktop: Tab Bar Container (Flex Column) */
+    #videoTabs {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        overflow-x: hidden;
+    }
+
+    .video-player-inner-wrapper {
+        border: 1px solid #334155; /* Add a border for visual separation */
+    }
+    
+    .desktop-title-bar {
+        margin-top: 0 !important;
+        padding-top: 4rem; /* Spacing from top */
+    }
 }
 
+
+/* --- Common Styles (Mobile & Desktop) --- */
 .tab-button:hover {
-    background-color: #6b7280; /* gray-500 */
-    color: #f3f4f6; /* gray-100 */
+    background-color: #475569; 
+    color: #f1f5f9; 
 }
 
 .tab-button.active {
-    background-color: #3b82f6; /* blue-500 */
+    background-color: #3b82f6; 
     color: white;
     font-weight: 600;
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.5);
+}
+
+.gallery-item {
+    cursor: pointer;
+    transform: transition duration-300 hover:scale-105;
+}
+
+.gallery-item img {
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item p {
+    color: #cbd5e1; 
+    font-weight: 400;
+    font-size: 0.875rem; 
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: center;
 }
