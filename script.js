@@ -66,11 +66,12 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: "Broken Sword Hero", image: "https://mmsubmovie.com/wp-content/uploads/2025/08/qWsGQKgrp6wpFXO8ShPbZgpdXDa-200x300.jpg", videoLink: "https://mega.nz/embed/CFNAkAgT#6uE-kFZmNGgpIB3_QH0owhKcEkfE-Bg-fUFWCrJmr4U" },
         { name: "Atlas", image: "https://mmsubmovie.com/wp-content/uploads/2025/08/bcM2Tl5HlsvPBnL8DKP9Ie6vU4r-200x300.jpg", videoLink: "https://mega.nz/embed/mYF1VZKY#yGrndy7HOHKekDIqAgrhgr3sHpBgHYC-y5JX7RkIRB0" },
         { name: "Shang-Chi", image: "https://mmsubmovie.com/wp-content/uploads/2025/08/d08HqqeBQSwN8i8MEvpsZ8Cb438-200x300.jpg", videoLink: "https://mega.nz/embed/OgdFBT7R#OG2XlCNKdUAQB0FmNm8U4-dfgqI8VhlDcajCQ0TMZyg" },
+        
     ];
 
     // 2. BOLLYWOOD Videos
     const bollywoodVideos = [
-        { name: "Balota", image: "https://mmsubmovie.com/wp-content/uploads/2025/02/29IpnkqWIkFvSlynGu7X7ylAdiL-200x300.jpg", videoLink: "https://mega.nz/embed/GRFX2CjK#GzEbDme5g7ET2MDNiACK6_akCK8nBBPEuctiZ75O7q8" },
+        { name: "Balota", image: "https://mmsubmovie.com/wp-content/uploads/2025/02/29IpnkqWIkFvSlynGu7X6ylAdiL-200x300.jpg", videoLink: "https://mega.nz/embed/GRFX2CjK#GzEbDme5g7ET2MDNiACK6_akCK8nBBPEuctiZ75O7q8" },
         { name: "Soorarai Pottru", image: "https://mmsubmovie.com/wp-content/uploads/2025/09/5uimlxPCgAei8JfQUDFEUQLoyyh-200x300.jpg", videoLink: "https://mega.nz/embed/3c8GwTzK#qEcN3h3CM_dzWXwi3NQEr0DBITwQSVKjMVObGWqowBA" },
         { name: "Maa", image: "https://mmsubmovie.com/wp-content/uploads/2025/09/kc5n7LJUmvBsVxzAla1ONN8kouP-200x300.jpg", videoLink: "https://mega.nz/embed/mR9DDbSD#z8gTuRMxFVeGB7Q8mphs9X8g1HPJkAtZ0ftOitfi6fE" },
         { name: "Godse", image: "https://mmsubmovie.com/wp-content/uploads/2025/09/cR9NesoY99WGQtQPViwbbthAWnt-200x300.jpg", videoLink: "https://mega.nz/embed/eo43SCJZ#5FuyVAlSYCCuNLjvgvcRpEayjJUM1kE3M4vfvPaT4cs" },
@@ -106,12 +107,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const dramaVideos = [
         { name: "About Family (Korea)", image: "https://mmsubmovie.com/wp-content/uploads/2025/02/gGHrBhwk4KpWSykvdVwMfmP2C7b-200x300.jpg", videoLink: "https://mega.nz/embed/nBU0XJ6Z#AGQW0L8rAl8ldfOj72kNoxiLzvmkcdTPBolrnAHkXV8" },
         { name: "The Whole Truth (Thriller/Drama)", image: "https://mmsubmovie.com/wp-content/uploads/2025/02/iL3Bx4YOqYdAMlx4czLyygA09MC-200x300.jpg", videoLink: "https://mega.nz/embed/zRd1GAbR#TvVodEc8Xsv6m4PGjvG_DMMiQTI5s9HSxyYwRSetfJA" },
+        
         // ဒီမှာ Drama ဗီဒီယိုတွေ ထပ်ထည့်ပါ
     ];
 
     // 4. မြန်မာ Videos (အသစ်ထပ်တိုး)
     const myanmarVideos = [
-        // မဟူရာရုပ်ရှင်ရုံ ကို Drama ကနေ ဒီကိုရွှေ့လိုက်သည်
         { name: "မဟူရာရုပ်ရှင်ရုံ (နေတိုး)", image: "https://i.ytimg.com/vi/IdeH-gD3jHw/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDydZr-LqUWkYYeBsERvvNLeR2vzg", videoLink: "https://www.youtube.com/embed/IdeH-gD3jHw"},
         { name: "မိုးမခဓားသမား(နေထူးနိုင်)", image: "https://i.ytimg.com/vi/hidxwHpKAOI/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLCfFCSGtlsbq8amZnpz8PavHzWS9A", videoLink: "https://www.youtube.com/embed/hidxwHpKAOI?list=PL3IBGpSJCCYDkgEaFgfBawBzaqFcQstW-"},
         { name: "ရှိုးမထုတ်တဲ့ဖိုးရှုပ်(နေထူးနိုင်)", image: "https://i.ytimg.com/vi/AXG-1PMRUow/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLAw0f0JPuEeE9vq9ImtqLYu54Toyg", videoLink: "https://www.youtube.com/embed/AXG-1PMRUow?list=PL3IBGpSJCCYDkgEaFgfBawBzaqFcQstW-"},
@@ -124,6 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: "ဒီကောင်ဘယ်သူတုန်း(နေတိုး)", image: "https://i.ytimg.com/vi/e4oetvhOSgI/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLB68mt_aWu4C02ZaW8KFDXyoW7Gsg", videoLink: "https://www.youtube.com/embed/e4oetvhOSgI?list=PLkQrCHWyqYFlxbGMVqwfl4opvbkATpCu7"},
         { name: "တာတေကြီး(နေတိုး)", image: "https://i.ytimg.com/vi/3fQUxZgFD9U/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLBMe2zmuLrJsKHhbVkZkw-AOKVweQ", videoLink: "https://www.youtube.com/embed/3fQUxZgFD9U?list=PLkQrCHWyqYFlxbGMVqwfl4opvbkATpCu7"},
         // ဒီမှာ မြန်မာဗီဒီယိုတွေ ထပ်ထည့်ပါ
+        // { name: "အသစ်ထပ်ထည့်မည့်မြန်မာကား", image: "your_image_link", videoLink: "your_mega_link" },
     ];
 
 
@@ -142,7 +144,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const videoPlayer = document.getElementById('videoPlayer');
     const imageGallery = document.getElementById('imageGallery');
     const videoTabs = document.getElementById('videoTabs');
-    const mainContentArea = document.querySelector('.main-content-area');
     
     //  Tab စာရင်း (မြန်မာ ပါဝင်သည်) 
     const categories = ["Action", "Bollywood", "Drama", "မြန်မာ", "Adult", "Cartoon"];
@@ -160,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // --- Gallery Items များကို ဖန်တီးသည် ---
     
-    /**
+    /
      * Gallery Items များကို ဖန်တီးပြီး HTML ထဲသို့ ထည့်သွင်းပေးသည့် function
      */
     function renderGallery(category) {
@@ -175,10 +176,10 @@ document.addEventListener('DOMContentLoaded', () => {
             item.className = 'gallery-item cursor-pointer transform transition duration-300 hover:scale-105';
             item.setAttribute('data-video', video.videoLink);
             
-            // Mega Link, YouTube Link သုံးနိုင်သည်။
-            const videoSrc = video.videoLink.includes('mega.nz/embed') || video.videoLink.includes('youtube.com/embed')
+            // Mega Link ဖြစ်မဖြစ် စစ်ပြီး <iframe> တွင် အသုံးပြုရန် src attribute တွင် သတ်မှတ်သည်
+            const videoSrc = video.videoLink.includes('mega.nz/embed') 
                 ? video.videoLink 
-                : video.videoLink; // အခြား embed link များအတွက်
+                : video.videoLink; // YouTube embed link အတွက် ပြောင်းလဲစရာမလို
             
             // Content (ပုံ နှင့် နာမည်) ကို ထည့်သွင်းသည်။
             item.innerHTML = `
@@ -188,14 +189,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Click Event ကို တွဲပေးသည်။ (ဗီဒီယိုပြောင်းလဲရန်)
             item.addEventListener('click', () => {
+                const videoPlayer = document.getElementById('videoPlayer');
                 // ဗီဒီယို Link ကို iframe ရဲ့ src ထဲကို တိုက်ရိုက်ထည့်ပေးသည်
                 videoPlayer.src = videoSrc;
-                
-                // ဗီဒီယို ပြောင်းပြီးနောက် Gallery အပေါ်ဆုံးသို့ ပြန်ရွှေ့ရန်
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
             });
 
             // Gallery Container ထဲသို့ ထည့်သွင်းသည်။
@@ -205,7 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Tab ခလုတ်များကို ဖန်တီးသည် ---
 
-    /**
+    /
      * Tab ခလုတ်များကို ဖန်တီးပြီး event listener များ တွဲပေးသည်။
      */
     function renderTabs() {
@@ -230,12 +226,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 // ရွေးချယ်ထားသော Category ဖြင့် Gallery ကို ပြန်လည်ပြသခြင်း
                 currentCategory = category;
                 renderGallery(currentCategory);
-                
-                // Tab ပြောင်းတာနဲ့ Gallery ရဲ့ အပေါ်ဆုံးကို scroll ပြန်လုပ်ပေးဖို့
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
             });
 
             videoTabs.appendChild(button);
