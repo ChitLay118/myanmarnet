@@ -2,32 +2,25 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    /* Tailwind config မှာ သတ်မှတ်ထားသော dark-bg-main (#0f172a) ကို သုံးပါမည်။ */
     background-color: #0f172a; 
     min-height: 100vh;
 }
 
-/* --- Video Player Container (Mobile Fixed at Top for better UX) --- */
-/* Mobile မှာ Video Player ကို အမြဲတမ်း မျက်နှာပြင်ရဲ့ အပေါ်ဆုံးမှာ ကပ်ထားမည် */
-@media (max-width: 767px) {
-    .video-player-container {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 40; /* Tab Bar အောက်မှာ ရှိနေရမည် (z-50) */
-        padding: 4px; /* ဘေးဘောင်လေးများ ချန်ရန် */
-        background-color: #0f172a;
-    }
-    /* Player အတွက် နေရာပေးရန် Container ရဲ့ padding-top ကို ပြင်သည် */
-    .max-w-7xl.mx-auto {
-        padding-top: calc(56.25vw + 3rem); /* Player အမြင့် + Heading နေရာအတွက် ချိန်ညှိသည် */
-    }
+/* --- Mobile View (Default: max-width 767px) --- */
+
+/* Mobile: Player Container is fixed at the top, full width */
+.fixed-player-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0;
+    background-color: #0f172a; /* Player နောက်ခံအရောင် */
+    height: 150px; /* Adjust height for the player + title */
 }
 
-/* --- Sticky Tab Bar (Mobile: Fixed at Bottom, Desktop: Static) --- */
+/* Mobile: Tab Bar is fixed at the bottom */
 .sticky-tab-bar {
-    /* Mobile Fixed Bottom */
     position: fixed;
     bottom: 0;
     left: 0;
@@ -35,41 +28,26 @@ body {
     z-index: 50; 
     background-color: #0f172a; /* Main Background Color */
     padding: 8px 0;
-    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5); /* အပေါ်ဘက်တွင် အရိပ်ခတ်ထားသည် */
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5); 
 }
 
-
-/* Desktop View (md breakpoint နှင့် အထက်) */
-@media (min-width: 768px) {
-    /* Desktop မှာ Player က အပေါ်မှာ ပုံမှန်အတိုင်းဖြစ်သည် */
-    .video-player-container {
-        position: static; 
-        max-width: 100%; 
-    }
-    
-    /* Desktop မှာ Tab Bar ကို ပုံမှန်အတိုင်း အောက်ဆုံးမှာ ထားမည် */
-    .sticky-tab-bar {
-        position: static;
-        padding: 0;
-        box-shadow: none;
-        background-color: transparent;
-    }
-
-    .max-w-7xl.mx-auto {
-        padding-top: 2.5rem; /* ပုံမှန် padding-top */
-    }
+/* Mobile: Main Content Area (Gallery) padding-top for spacing below fixed player */
+.main-content-area {
+    /* Height of fixed player (150px) + Title/Email height (approx 50px) + Extra margin */
+    padding-top: 180px; 
+    padding-bottom: 80px; /* Space for the fixed bottom tab bar */
+    min-height: 100vh;
 }
 
-/* Custom styles for Tab Buttons - Aesthetic Changes */
+/* Custom styles for Tab Buttons - Mobile */
 .tab-button {
-    /* အလယ်တည့်တည့် ကျစေရန် min-width ကို ချိန်ညှိပြီး margin ပေးသည် */
-    min-width: 15%; 
+    min-width: 20%; 
     padding: 8px 4px; 
     border-radius: 6px;
-    font-size: 0.75rem; /* Mobile မှာ စာလုံးအရွယ်အစား လျှော့ချသည် */
+    font-size: 0.75rem; 
     font-weight: 500;
-    color: #94a3b8; /* Slate 400 */
-    background-color: #334155; /* Slate 700 */
+    color: #94a3b8; 
+    background-color: #334155; 
     transition: all 0.2s;
     cursor: pointer;
     flex-shrink: 0; 
@@ -77,34 +55,103 @@ body {
     margin: 0 2px; 
 }
 
+
+/* --- Desktop View (min-width 768px) --- */
 @media (min-width: 768px) {
+    /* Desktop: Small Fixed Player (Top Right) */
+    .fixed-player-container {
+        position: fixed;
+        top: 20px; /* မျက်နှာပြင် အပေါ်မှ အကွာအဝေး */
+        right: 20px; /* မျက်နှာပြင် ညာဘက်မှ အကွာအဝေး */
+        left: unset;
+        width: 350px; /* ကစားသမား၏ အကျယ် (သေးငယ်သည်) */
+        height: auto;
+        padding: 0;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    }
+    
+    /* Desktop: Main Content Area (Gallery) padding-top - No need for big gap */
+    .main-content-area {
+        padding-top: 2.5rem; /* ပုံမှန် padding */
+        padding-bottom: 2.5rem;
+        min-height: unset;
+    }
+    
+    /* Desktop: Tab Bar is Static (Part of the flow, no fixed position) */
+    .sticky-tab-bar {
+        position: static;
+        padding: 0;
+        box-shadow: none;
+        background-color: transparent;
+        margin-top: 1rem;
+        width: 100%; /* Tab container width */
+        max-width: 200px; /* Tab Column width */
+    }
+    
+    /* Desktop: Tab Button (Vertical) */
      .tab-button {
-        font-size: 1rem; /* Desktop မှာ ပုံမှန်အရွယ်အစား ပြန်ထားသည် */
+        font-size: 1rem; 
         padding: 10px 16px; 
         min-width: unset;
-        margin: 0 4px; 
+        margin: 0; /* No horizontal margin for vertical stack */
+        width: 100%;
+        text-align: left; /* Text to the left */
+    }
+    
+    /* Desktop: Hide the mobile-only title/email inside the player */
+    .md\:hidden {
+        display: none !important;
+    }
+
+    /* Desktop: Tab Bar Container (Flex Column) */
+    #videoTabs {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        overflow-x: hidden;
+    }
+
+    .video-player-inner-wrapper {
+        border: 1px solid #334155; /* Add a border for visual separation */
+    }
+    
+    .desktop-title-bar {
+        margin-top: 0 !important;
+        padding-top: 4rem; /* Spacing from top */
     }
 }
 
 
+/* --- Common Styles (Mobile & Desktop) --- */
 .tab-button:hover {
-    background-color: #475569; /* Slate 600 */
-    color: #f1f5f9; /* Text Light */
+    background-color: #475569; 
+    color: #f1f5f9; 
 }
 
 .tab-button.active {
-    background-color: #3b82f6; /* Accent Blue 500 */
+    background-color: #3b82f6; 
     color: white;
     font-weight: 600;
     box-shadow: 0 2px 8px rgba(59, 130, 246, 0.5);
 }
 
-/* Gallery Item Aesthetics */
+.gallery-item {
+    cursor: pointer;
+    transform: transition duration-300 hover:scale-105;
+}
+
+.gallery-item img {
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
 .gallery-item p {
-    color: #cbd5e1; /* Slate 300 */
+    color: #cbd5e1; 
     font-weight: 400;
-    font-size: 0.875rem; /* text-sm */
+    font-size: 0.875rem; 
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    text-align: center;
 }
