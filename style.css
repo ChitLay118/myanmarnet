@@ -1,78 +1,110 @@
 /* Custom styles not handled by Tailwind */
 
 body {
-    /* Sets the Inter font and a custom dark background color (#1f2937 is dark blue-gray, not too black) */
     font-family: 'Inter', sans-serif;
-    background-color: #1f2937; 
+    /* Tailwind config မှာ သတ်မှတ်ထားသော dark-bg-main (#0f172a) ကို သုံးပါမည်။ */
+    background-color: #0f172a; 
+    min-height: 100vh;
 }
 
-/* --- Video Player Container (Mobile Sticky, Desktop Static) --- */
-.video-player-container {
-    /* Mobile View မှာ Sticky ဖြစ်စေသည် */
-    position: sticky;
-    top: 0;
-    z-index: 10; 
-    max-width: 100%; 
-    margin-left: auto;
-    margin-right: auto;
+/* --- Video Player Container (Mobile Fixed at Top for better UX) --- */
+/* Mobile မှာ Video Player ကို အမြဲတမ်း မျက်နှာပြင်ရဲ့ အပေါ်ဆုံးမှာ ကပ်ထားမည် */
+@media (max-width: 767px) {
+    .video-player-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 40; /* Tab Bar အောက်မှာ ရှိနေရမည် (z-50) */
+        padding: 4px; /* ဘေးဘောင်လေးများ ချန်ရန် */
+        background-color: #0f172a;
+    }
+    /* Player အတွက် နေရာပေးရန် Container ရဲ့ padding-top ကို ပြင်သည် */
+    .max-w-7xl.mx-auto {
+        padding-top: calc(56.25vw + 3rem); /* Player အမြင့် + Heading နေရာအတွက် ချိန်ညှိသည် */
+    }
 }
 
-/* --- Sticky Tab Bar (Always Sticky) --- */
+/* --- Sticky Tab Bar (Mobile: Fixed at Bottom, Desktop: Static) --- */
 .sticky-tab-bar {
-    /* Tab Bar ကို Scroll လုပ်ရင် မပါသွားစေရန် top: 0 ဖြင့် Sticky ထားသည် */
-    position: sticky;
-    top: 0;
-    z-index: 20; /* Player ထက် ပိုမြင့်ရမည် */
-    padding-top: 4px; /* Player ရဲ့ အောက်နဲ့ ကပ်နေစေရန် အနည်းငယ် ချိန်ညှိထားသည် */
+    /* Mobile Fixed Bottom */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 50; 
+    background-color: #0f172a; /* Main Background Color */
+    padding: 8px 0;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5); /* အပေါ်ဘက်တွင် အရိပ်ခတ်ထားသည် */
 }
 
 
 /* Desktop View (md breakpoint နှင့် အထက်) */
 @media (min-width: 768px) {
+    /* Desktop မှာ Player က အပေါ်မှာ ပုံမှန်အတိုင်းဖြစ်သည် */
     .video-player-container {
-        /* Desktop မှာ Sticky မဖြစ်စေရန် 'position: static' ပြန်ပြောင်းလိုက်သည် */
         position: static; 
-        max-width: 75%; 
+        max-width: 100%; 
     }
     
+    /* Desktop မှာ Tab Bar ကို ပုံမှန်အတိုင်း အောက်ဆုံးမှာ ထားမည် */
     .sticky-tab-bar {
-         /* Desktop မှာ Tab Bar ကို Player အောက်မှာ ပုံမှန်အတိုင်း ထားရန် 'position: static' ပြန်ပြောင်းလိုက်သည် */
         position: static;
-        padding-top: 0;
+        padding: 0;
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+    .max-w-7xl.mx-auto {
+        padding-top: 2.5rem; /* ပုံမှန် padding-top */
     }
 }
 
-/* Custom styles for Tab Buttons */
+/* Custom styles for Tab Buttons - Aesthetic Changes */
 .tab-button {
-    /* ***** ပြင်ဆင်ချက်: အလယ်ကျစေရန် flex-grow ဖယ်ပြီး min-width ပေးထားသည် ***** */
-    /* flex-grow: 1;  (ယခင်က Mobile မှာ အကျယ်ဖြန့်ရန် ထည့်သွင်းထားသည်) */
-    min-width: 15%; /* Mobile မှာ Tab ၆ ခု အလယ်တည့်တည့်ကျအောင် နေရာပေးလိုက်သည် */
-    padding: 8px 0px; 
-    border-radius: 8px;
+    /* အလယ်တည့်တည့် ကျစေရန် min-width ကို ချိန်ညှိပြီး margin ပေးသည် */
+    min-width: 15%; 
+    padding: 8px 4px; 
+    border-radius: 6px;
+    font-size: 0.75rem; /* Mobile မှာ စာလုံးအရွယ်အစား လျှော့ချသည် */
     font-weight: 500;
-    color: #9ca3af; /* gray-400 */
-    background-color: #4b5563; /* gray-600 */
+    color: #94a3b8; /* Slate 400 */
+    background-color: #334155; /* Slate 700 */
     transition: all 0.2s;
     cursor: pointer;
     flex-shrink: 0; 
     text-align: center;
-    margin: 0 2px; /* ခလုတ်တစ်ခုချင်းစီကြား နေရာခွဲရန် */
+    margin: 0 2px; 
 }
 
-/* Mobile View Tab Adjustments */
-#videoTabs {
-    /* Mobile မှာ Tabs တွေ အလယ်ကျသွားအောင် justify-center ကို HTML မှာ ထည့်ပြီးပြီ */
-    padding: 0;
-    max-width: 100%; /* Tab container က screen width ထက် မပိုစေရန် */
+@media (min-width: 768px) {
+     .tab-button {
+        font-size: 1rem; /* Desktop မှာ ပုံမှန်အရွယ်အစား ပြန်ထားသည် */
+        padding: 10px 16px; 
+        min-width: unset;
+        margin: 0 4px; 
+    }
 }
+
 
 .tab-button:hover {
-    background-color: #6b7280; /* gray-500 */
-    color: #f3f4f6; /* gray-100 */
+    background-color: #475569; /* Slate 600 */
+    color: #f1f5f9; /* Text Light */
 }
 
 .tab-button.active {
-    background-color: #3b82f6; /* blue-500 */
+    background-color: #3b82f6; /* Accent Blue 500 */
     color: white;
     font-weight: 600;
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.5);
+}
+
+/* Gallery Item Aesthetics */
+.gallery-item p {
+    color: #cbd5e1; /* Slate 300 */
+    font-weight: 400;
+    font-size: 0.875rem; /* text-sm */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
